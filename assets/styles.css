@@ -277,3 +277,33 @@ h1 em,h2 em{color:var(--accent);font-style:italic}
 @media(prefers-reduced-motion:no-preference){
   .eb-note,.eb-bento-link,.eb-focus-list article,.button{transition:background .25s,border-color .25s,box-shadow .25s,transform .25s}
 }
+
+
+/* Tipografía con más energía, sin perder claridad ni elegancia. */
+:root{
+  --font-head:"Trebuchet MS","Segoe UI",system-ui,sans-serif;
+  --font-body:"Segoe UI","Trebuchet MS",system-ui,sans-serif;
+  --font-mono:"Consolas","Cascadia Code",monospace;
+}
+body{font-family:var(--font-body);letter-spacing:.006em}
+h1,h2,h3{
+  font-family:var(--font-head);
+  font-weight:700;
+  letter-spacing:-.035em;
+}
+h1{letter-spacing:-.045em}
+h2{letter-spacing:-.03em}
+h3{letter-spacing:-.018em}
+h1 em,h2 em{
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:400;
+  letter-spacing:-.04em;
+}
+.brand>span:last-child{font-family:var(--font-head);font-weight:700}
+.brand-symbol{font-family:Georgia,"Times New Roman",serif}
+.signature{font-family:Georgia,"Times New Roman",serif}
+.primary-nav a,.button,.menu-toggle{font-family:var(--font-body);font-weight:600}
+.eyebrow,.small-mono,.folio,.chapter,.nav-index,.nav-foot,
+.eb-online,.eb-journal-stats span,.badge{
+  font-family:var(--font-mono);
+}
