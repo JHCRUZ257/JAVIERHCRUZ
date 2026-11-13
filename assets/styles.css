@@ -337,3 +337,30 @@ h1 em,h2 em{
 .primary-nav a,.button,.menu-toggle{font-family:var(--font-body);font-weight:700}
 .eyebrow,.small-mono,.folio,.chapter,.nav-index,.nav-foot,
 .eb-online,.eb-journal-stats span,.badge{font-family:var(--font-mono)}
+
+
+/* Collage sutil de portadas clásicas detrás del contenido. */
+body{
+  position:relative;
+  background:var(--paper);
+}
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  opacity:.76;
+  background:
+    linear-gradient(180deg,rgba(5,15,29,.46),rgba(5,15,29,.62)),
+    url("book-covers.svg") center center / min(100vw,1600px) 100vh no-repeat;
+}
+.site-header{z-index:20}
+main,.site-footer{position:relative;z-index:1}
+@media(max-width:800px){
+  body:before{
+    background:
+      linear-gradient(180deg,rgba(5,15,29,.54),rgba(5,15,29,.72)),
+      url("book-covers.svg") center top / auto 100vh no-repeat;
+  }
+}
