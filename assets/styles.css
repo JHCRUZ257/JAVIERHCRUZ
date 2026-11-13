@@ -15,3 +15,123 @@
 .eb-journal-stats span{font-size:.63rem}
 @media(max-width:520px){.eb-contact .contact-story h1{font-size:clamp(2.4rem,12.8vw,3.7rem)}}
 @media(max-width:360px){.eb-section-head h2{font-size:2.1rem}}
+
+
+/* Identidad editorial: papel marfil, tinta navy y bronce apagado. */
+:root{
+  --ink:#18314b;
+  --paper:#f4f1e8;
+  --surface:#ebe6db;
+  --muted:#5f6b77;
+  --line:#cec7b9;
+  --accent:#9a7248;
+  --tint:#e8dfcf;
+  --focus:#b1834f;
+  --danger:#964b3f;
+  --input:#fbf9f4;
+}
+html{background:var(--paper)}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.72;
+}
+::selection{background:var(--ink);color:var(--paper)}
+h1,h2,h3{font-weight:400}
+h1{letter-spacing:-.055em}
+h2{letter-spacing:-.04em}
+h1 em,h2 em{color:var(--accent)}
+:focus-visible{outline-color:var(--focus)}
+.site-header{
+  color:var(--paper);
+  background:#142a43;
+  border-color:rgba(244,241,232,.16);
+  box-shadow:8px 0 28px rgba(20,42,67,.08);
+}
+.brand-symbol{border-color:#b89a70;color:#d1b58c}
+.brand small{color:#c5c9cd}
+.primary-nav a{color:#f4f1e8}
+.primary-nav a:hover,.primary-nav a[aria-current=page]{color:#d1b58c}
+.nav-index{color:#aab4bf}
+.primary-nav a[aria-current=page] .nav-index{color:#d1b58c}
+.nav-foot{color:#c5c9cd}
+.menu-toggle{color:#d1b58c}
+main{background:var(--paper)}
+.site-footer{color:var(--muted);border-color:var(--line)}
+.site-footer strong{color:var(--ink)}
+.skip-link{background:var(--ink);color:var(--paper)}
+.eyebrow,.folio{color:var(--accent)}
+.button,.button.amber{
+  color:var(--paper);
+  background:var(--ink);
+  border-color:var(--ink);
+  box-shadow:0 5px 14px rgba(24,49,75,.1);
+}
+.button:hover,.button.amber:hover{
+  background:#264563;
+  border-color:#264563;
+}
+.button.secondary{
+  color:var(--ink);
+  background:transparent;
+  border-color:var(--line);
+  box-shadow:none;
+}
+.button.secondary:hover{border-color:var(--accent);color:var(--accent)}
+.eb-topline{border-color:var(--line)}
+.eb-online{color:var(--muted)}
+.eb-online i{background:var(--accent)}
+.eb-title>p,.eb-page-head>p:last-child{color:var(--muted)}
+.eb-photo img{filter:saturate(.58) sepia(.12) contrast(.98)}
+.eb-photo:after{background:linear-gradient(transparent,rgba(11,25,40,.76))}
+.eb-note,.eb-journal-editor,.contact-form{
+  background:var(--surface);
+  border-color:var(--line);
+}
+.eb-note{box-shadow:0 12px 32px rgba(31,45,60,.045)}
+.eb-note p,.eb-focus-list p,.eb-method article p:not(.eyebrow),
+.eb-note-wide p:not(.eyebrow),.eb-page-head>p:last-child{color:var(--muted)}
+.eb-bento-link{border-color:var(--line)}
+.eb-bento-link:hover{border-color:var(--accent);background:rgba(232,223,207,.32)}
+.eb-bento-link>.small-mono{color:var(--muted)}
+.eb-section-head h2,.eb-method h2,.eb-outro h2,.eb-page-head h1{color:var(--ink)}
+.eb-focus-list article,.eb-method,.eb-method article,.eb-outro{border-color:var(--line)}
+.eb-focus-list article>span,.eb-method p.eb-question{color:var(--accent)!important}
+.eb-note-wide{
+  background:var(--surface);
+  border-color:var(--accent);
+}
+.eb-journal-editor .field input,.eb-journal-editor .field select,
+.eb-journal-editor .field textarea,.eb-search .field input,.eb-search .field select,
+.field input,.field select,.field textarea{
+  color:var(--ink);
+  border-color:var(--line);
+}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent)}
+.field input::placeholder,.field textarea::placeholder{color:#78828c}
+.eb-journal-stats,.eb-backup{border-color:var(--line)}
+.eb-journal-stats strong,.eb-contact-note>span{color:var(--accent)}
+.filters button{color:var(--muted);border-color:var(--line)}
+.filters button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.task-row,.project-row,.journal-row,.empty-state{
+  background:var(--surface);
+  border-color:var(--line);
+}
+.eb-notebook .empty-state{background:transparent}
+.record-meta,.form-help,.local-note{color:var(--muted)}
+.contact-detail{border-color:var(--line)}
+.contact-detail>span{color:var(--muted)}
+.contact-prompt,.eb-contact-note{color:var(--muted)}
+.status,.note{background:var(--surface);border-color:var(--accent);color:var(--ink)}
+.text-link,.eb-outro .text-link{color:var(--accent)}
+.badge{background:var(--tint);color:var(--ink)}
+@media(max-width:800px){
+  .site-header{background:#142a43;border-color:rgba(244,241,232,.16)}
+  .primary-nav a{color:var(--paper)}
+  .primary-nav a:hover,.primary-nav a[aria-current=page]{color:#d1b58c}
+  .menu-toggle{border-color:rgba(209,181,140,.55)}
+}
+@media(prefers-reduced-motion:no-preference){
+  .eb-note,.eb-bento-link,.eb-focus-list article{transition:background-color .25s,border-color .25s,box-shadow .25s}
+  .eb-focus-list article:hover{background:rgba(232,223,207,.24)}
+}
