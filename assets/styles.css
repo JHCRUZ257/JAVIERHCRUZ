@@ -734,3 +734,15 @@ main,.site-footer{position:relative;z-index:1}
   .eb-photo,.eb-note,.eb-bento-link{transform:none}
   .eb-photo:hover,.eb-note:hover,.eb-bento-link:hover,.eb-focus-list article:hover,.eb-title .button.amber:hover{transform:none}
 }
+
+
+/* Mascota del sitio: un búho pequeño recorre el borde inferior. */
+.owl-mascot{position:fixed;left:12px;bottom:max(8px,env(safe-area-inset-bottom));width:72px;height:78px;z-index:8;pointer-events:none;user-select:none;filter:drop-shadow(0 5px 12px rgba(2,9,22,.42));animation:owl-cross 42s linear infinite alternate}
+.owl-mascot svg{width:100%;height:100%;overflow:visible}
+.owl-figure{transform-box:fill-box;transform-origin:center;animation:owl-bob .54s ease-in-out infinite}
+.owl-left-leg{transform-box:fill-box;transform-origin:top center;animation:owl-step .54s ease-in-out infinite alternate}
+.owl-right-leg{transform-box:fill-box;transform-origin:top center;animation:owl-step .54s ease-in-out infinite alternate-reverse}
+@keyframes owl-cross{from{transform:translateX(0)}to{transform:translateX(calc(100vw - 84px))}}
+@keyframes owl-bob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-2px) rotate(-1deg)}}
+@keyframes owl-step{from{transform:rotate(-24deg)}to{transform:rotate(24deg)}}
+@media(max-width:600px){.owl-mascot{width:58px;height:64px;left:8px;animation-duration:34s}@keyframes owl-cross{from{transform:translateX(0)}to{transform:translateX(calc(100vw - 68px))}}}

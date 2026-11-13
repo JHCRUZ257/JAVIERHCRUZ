@@ -21,6 +21,35 @@
     if (typeof value !== 'string' || !value.trim()) continue;
     try { const url = new URL(value.trim()); if (['http:', 'https:'].includes(url.protocol) && url.hostname) { link.href = url.href; link.hidden = false; link.target = '_blank'; link.rel = 'noopener noreferrer'; } } catch (_) { /* Un enlace sin configurar permanece oculto. */ }
   }
+  if (site === 'eber' && !document.querySelector('.owl-mascot')) {
+    const owl = document.createElement('div');
+    owl.className = 'owl-mascot';
+    owl.setAttribute('role', 'img');
+    owl.setAttribute('aria-label', 'Un búho pequeño que camina por la página');
+    owl.innerHTML = `<svg viewBox="0 0 88 92" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="owl-feathers" x1="18" y1="16" x2="67" y2="76" gradientUnits="userSpaceOnUse"><stop stop-color="#426b7d"/><stop offset="1" stop-color="#10283d"/></linearGradient>
+        <linearGradient id="owl-belly" x1="31" y1="39" x2="56" y2="73" gradientUnits="userSpaceOnUse"><stop stop-color="#fff0c9"/><stop offset="1" stop-color="#d9bc7c"/></linearGradient>
+      </defs>
+      <g class="owl-figure">
+        <path d="M20 35 17 20l15 8m36 7 3-15-15 8" fill="#29485d" stroke="#d9bc7c" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M44 17c-17 0-27 13-27 32 0 18 11 29 27 29s27-11 27-29c0-19-10-32-27-32Z" fill="url(#owl-feathers)" stroke="#d9bc7c" stroke-width="2"/>
+        <path d="M22 51c-10 5-12 16-7 22 8-1 14-7 16-15m35-7c10 5 12 16 7 22-8-1-14-7-16-15" fill="#34596c" stroke="#d9bc7c" stroke-opacity=".8" stroke-width="1.5"/>
+        <path d="M27 51c0-11 7-18 17-18s17 7 17 18v15c-5 7-11 10-17 10s-12-3-17-10V51Z" fill="url(#owl-belly)" stroke="#e3ce9e" stroke-width="1.4"/>
+        <ellipse cx="34" cy="43" rx="11" ry="12" fill="#fff4dc"/>
+        <ellipse cx="54" cy="43" rx="11" ry="12" fill="#fff4dc"/>
+        <circle cx="36" cy="44" r="4.5" fill="#102238"/>
+        <circle cx="52" cy="44" r="4.5" fill="#102238"/>
+        <circle cx="37.5" cy="42.5" r="1.3" fill="#fff"/>
+        <circle cx="53.5" cy="42.5" r="1.3" fill="#fff"/>
+        <path d="m44 49-5 7h10l-5-7Z" fill="#dba947"/>
+        <path d="M29 62c5-4 9-4 14 0m2 0c5-4 9-4 14 0" fill="none" stroke="#c5a35f" stroke-opacity=".55" stroke-width="1.3"/>
+        <g class="owl-left-leg"><path d="M36 76v7m0 0-5 3m5-3 5 3" stroke="#dba947" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+        <g class="owl-right-leg"><path d="M52 76v7m0 0-5 3m5-3 5 3" stroke="#dba947" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+      </g>
+    </svg>`;
+    document.body.append(owl);
+  }
   const contact = $('contact-form');
   if (contact) contact.addEventListener('submit', event => {
     event.preventDefault();
