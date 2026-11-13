@@ -512,3 +512,5 @@ main,.site-footer{position:relative;z-index:1}
   .eb-home>.eb-bento{grid-column:1;grid-row:auto}
   .eb-title h1{max-width:none;font-size:clamp(3.5rem,6vw,5.2rem)}
 }
+
+.eb-title h1{max-width:none}
