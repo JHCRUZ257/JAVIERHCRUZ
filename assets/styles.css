@@ -353,7 +353,7 @@ body:before{
   opacity:.76;
   background:
     linear-gradient(180deg,rgba(5,15,29,.46),rgba(5,15,29,.62)),
-    url("book-covers.svg") center center / min(100vw,1600px) 100vh no-repeat;
+    none;
 }
 .site-header{z-index:20}
 main,.site-footer{position:relative;z-index:1}
@@ -361,7 +361,7 @@ main,.site-footer{position:relative;z-index:1}
   body:before{
     background:
       linear-gradient(180deg,rgba(5,15,29,.54),rgba(5,15,29,.72)),
-      url("book-covers.svg") center top / auto 100vh no-repeat;
+      none;
   }
 }
 
@@ -753,3 +753,19 @@ main,.site-footer{position:relative;z-index:1}
 @keyframes owl-flap-left{0%,76%,100%{transform:rotate(0) scaleY(1)}77%,79%,81%,83%{transform:rotate(-20deg) scaleY(.72)}78%,80%,82%,84%{transform:rotate(20deg) scaleY(.72)}}
 @keyframes owl-flap-right{0%,76%,100%{transform:rotate(0) scaleY(1)}77%,79%,81%,83%{transform:rotate(20deg) scaleY(.72)}78%,80%,82%,84%{transform:rotate(-20deg) scaleY(.72)}}
 @media(max-width:600px){.owl-mascot{width:76px;height:86px;left:8px;animation-duration:27s}@keyframes owl-cross{from{transform:translateX(0)}to{transform:translateX(calc(100vw - 100px))}}}
+
+/* Portadas editoriales auténticas, suavizadas para mantener el fondo discreto. */
+.book-cover-photos{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:.56}
+.book-cover-photo{position:absolute;display:block;width:min(22vw,350px);aspect-ratio:381/588;max-width:none;object-fit:cover;border:1px solid rgba(230,213,173,.42);border-radius:7px;filter:saturate(.72) brightness(.74);box-shadow:0 18px 36px rgba(2,9,22,.42)}
+.book-cover-photo--einstein{left:12%;top:4%;transform:rotate(-8deg)}
+.book-cover-photo--anne{right:12%;top:5%;transform:rotate(7deg)}
+.book-cover-photo--cien{left:29%;top:43%;transform:rotate(-5deg)}
+.book-cover-photo--relativity{right:16%;top:43%;transform:rotate(5deg)}
+@media(max-width:800px){
+  .book-cover-photos{opacity:.52}
+  .book-cover-photo{width:min(35vw,150px);border-radius:5px}
+  .book-cover-photo--einstein{left:2%;top:13%;transform:rotate(-7deg)}
+  .book-cover-photo--anne{right:2%;top:14%;transform:rotate(6deg)}
+  .book-cover-photo--cien{left:11%;top:60%;transform:rotate(-4deg)}
+  .book-cover-photo--relativity{right:10%;top:59%;transform:rotate(4deg)}
+}

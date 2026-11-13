@@ -8,3 +8,11 @@ Archivo: assets/editorial.png
 Tipografías: subconjuntos latinos locales en formato WOFF, sin consultas a servidores de fuentes. Consulta los avisos y licencias completos en assets/fonts/LICENSES.txt.
 
 Dirección visual: Bitácora personal · tinta y ámbar.
+
+Portadas de libros del fondo (referencias visuales):
+- Einstein: Su vida y su universo, edición de Penguin Libros: https://www.penguinlibros.com/mx/biografias/43002-libro-einstein-su-vida-y-su-universo-9786073157490
+- Diario de Anne Frank, edición de Penguin Libros: https://www.penguinlibros.com/cl/biografias/77570-libro-diario-de-anne-frank-9788497593069
+- Cien años de soledad, primera edición (1967), cubierta de Iris Pagano; referencia histórica de Centro Gabo: https://www.centrogabo.org/index.php/10-datos-curiosos-sobre-cien-anos-de-soledad-que-quizas-no-sabias
+- Sobre la teoría de la relatividad especial y general, edición de Alianza Editorial: https://www.alianzaeditorial.es/libro/ciencias/sobre-la-teoria-de-la-relatividad-especial-y-general-albert-einstein-9788420609744/
+
+Las cubiertas se cargan como imágenes remotas de sus respectivas fuentes editoriales y culturales.

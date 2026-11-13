@@ -21,6 +21,18 @@
     if (typeof value !== 'string' || !value.trim()) continue;
     try { const url = new URL(value.trim()); if (['http:', 'https:'].includes(url.protocol) && url.hostname) { link.href = url.href; link.hidden = false; link.target = '_blank'; link.rel = 'noopener noreferrer'; } } catch (_) { /* Un enlace sin configurar permanece oculto. */ }
   }
+  if (site === 'eber' && !document.querySelector('.book-cover-photos')) {
+    const covers = document.createElement('div');
+    covers.className = 'book-cover-photos';
+    covers.setAttribute('aria-hidden', 'true');
+    covers.innerHTML = `
+      <img class="book-cover-photo book-cover-photo--einstein" src="https://www.penguinlibros.com/mx/170435-large_default/einstein-su-vida-y-su-universo.jpg" alt="" referrerpolicy="no-referrer" decoding="async">
+      <img class="book-cover-photo book-cover-photo--anne" src="https://www.penguinlibros.com/cl/53494-large_default/diario-de-anne-frank.jpg" alt="" referrerpolicy="no-referrer" decoding="async">
+      <img class="book-cover-photo book-cover-photo--cien" src="https://www.centrogabo.org/sites/default/files/100_anos_172.jpg" alt="" referrerpolicy="no-referrer" decoding="async">
+      <img class="book-cover-photo book-cover-photo--relativity" src="https://www.alianzaeditorial.es/imagenes/libros/grande/9788420609744-sobre-la-teoria-de-la-relatividad-especial-y-general.jpg" alt="" referrerpolicy="no-referrer" decoding="async">
+    `;
+    document.body.prepend(covers);
+  }
   if (site === 'eber' && !document.querySelector('.owl-mascot')) {
     const owlMarkup = `<svg viewBox="0 0 88 92" aria-hidden="true" focusable="false">
       <defs>
