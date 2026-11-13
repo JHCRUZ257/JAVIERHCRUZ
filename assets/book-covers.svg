@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+<defs>
+  <linearGradient id="quijote" x1="180" y1="80" x2="500" y2="650" gradientUnits="userSpaceOnUse"><stop stop-color="#315575"/><stop offset="1" stop-color="#0e2239"/></linearGradient>
+  <linearGradient id="frankenstein" x1="1060" y1="80" x2="1410" y2="660" gradientUnits="userSpaceOnUse"><stop stop-color="#536b78"/><stop offset="1" stop-color="#172a3a"/></linearGradient>
+  <linearGradient id="dracula" x1="640" y1="390" x2="1010" y2="920" gradientUnits="userSpaceOnUse"><stop stop-color="#422b4c"/><stop offset="1" stop-color="#101c35"/></linearGradient>
+  <linearGradient id="foil" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0d99b"/><stop offset=".5" stop-color="#b99455"/><stop offset="1" stop-color="#f0d99b"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-20%" width="160%" height="160%"><feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#020916" flood-opacity=".55"/></filter>
+</defs>
+<g opacity=".56" filter="url(#shadow)">
+  <g transform="rotate(-9 365 344)">
+    <rect x="190" y="78" width="350" height="535" rx="8" fill="url(#quijote)" stroke="url(#foil)" stroke-opacity=".68" stroke-width="2"/>
+    <rect x="207" y="95" width="316" height="501" rx="3" stroke="#e6d5ad" stroke-opacity=".48"/>
+    <path d="M364 232v163m-27-126h54m-69 126h84M334 269l-26-19m85 20 28-22m-81 105-32 24m78-24 28 21" stroke="#ead7ad" stroke-opacity=".6" stroke-width="3"/>
+    <circle cx="365" cy="310" r="95" stroke="#ead7ad" stroke-opacity=".3"/>
+    <path d="M255 424c36-22 73-25 109-10 36-15 73-12 109 10" stroke="#d8b66f" stroke-opacity=".6" stroke-width="2"/>
+    <text x="365" y="159" text-anchor="middle" fill="#f4ead2" font-family="Georgia,serif" font-size="14" letter-spacing="5">MIGUEL DE CERVANTES</text>
+    <text x="365" y="476" text-anchor="middle" fill="#fff3d4" font-family="Georgia,serif" font-size="38" letter-spacing="2">DON QUIJOTE</text>
+    <text x="365" y="512" text-anchor="middle" fill="#e5d4ae" font-family="Georgia,serif" font-size="12" letter-spacing="4">DE LA MANCHA</text>
+    <path d="M328 548h74" stroke="url(#foil)" stroke-width="2"/>
+  </g>
+  <g transform="rotate(8 1210 345)">
+    <rect x="1035" y="78" width="350" height="535" rx="8" fill="url(#frankenstein)" stroke="url(#foil)" stroke-opacity=".68" stroke-width="2"/>
+    <rect x="1052" y="95" width="316" height="501" rx="3" stroke="#e6d5ad" stroke-opacity=".48"/>
+    <path d="M1200 212l-24 80h38l-32 86 67-103h-42l31-63" fill="#d8b66f" fill-opacity=".5"/>
+    <path d="M1098 390c42-31 82-31 123 0 42-31 82-31 124 0" stroke="#dce2dc" stroke-opacity=".4" stroke-width="2"/>
+    <circle cx="1210" cy="302" r="91" stroke="#dce2dc" stroke-opacity=".3"/>
+    <text x="1210" y="159" text-anchor="middle" fill="#f4ead2" font-family="Georgia,serif" font-size="14" letter-spacing="5">MARY SHELLEY</text>
+    <text x="1210" y="465" text-anchor="middle" fill="#fff3d4" font-family="Georgia,serif" font-size="37" letter-spacing="2">FRANKENSTEIN</text>
+    <text x="1210" y="501" text-anchor="middle" fill="#e5d4ae" font-family="Georgia,serif" font-size="12" letter-spacing="4">O EL MODERNO PROMETEO</text>
+    <path d="M1173 548h74" stroke="url(#foil)" stroke-width="2"/>
+  </g>
+  <g transform="rotate(-3 820 680)">
+    <rect x="650" y="405" width="340" height="515" rx="8" fill="url(#dracula)" stroke="url(#foil)" stroke-opacity=".68" stroke-width="2"/>
+    <rect x="667" y="422" width="306" height="481" rx="3" stroke="#e6d5ad" stroke-opacity=".48"/>
+    <circle cx="820" cy="578" r="81" fill="#d8b66f" fill-opacity=".25" stroke="#ead7ad" stroke-opacity=".45"/>
+    <path d="M719 735h202l-15-68-31 25-25-84-29 71-31-31-26 87-25-21z" fill="#081629" fill-opacity=".85"/>
+    <path d="M786 678v-56h23v56m31 0v-78h24v78" stroke="#e6d5ad" stroke-opacity=".5" stroke-width="3"/>
+    <text x="820" y="479" text-anchor="middle" fill="#f4ead2" font-family="Georgia,serif" font-size="14" letter-spacing="5">BRAM STOKER</text>
+    <text x="820" y="804" text-anchor="middle" fill="#fff3d4" font-family="Georgia,serif" font-size="42" letter-spacing="4">DRÁCULA</text>
+    <text x="820" y="840" text-anchor="middle" fill="#e5d4ae" font-family="Georgia,serif" font-size="12" letter-spacing="4">UNA HISTORIA INMORTAL</text>
+    <path d="M783 875h74" stroke="url(#foil)" stroke-width="2"/>
+  </g>
+</g>
+</svg>
