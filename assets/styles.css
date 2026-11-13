@@ -736,24 +736,20 @@ main,.site-footer{position:relative;z-index:1}
 }
 
 
-/* Tres búhos: dos caminan por abajo y uno acompaña desde arriba. */
-.owl-mascot{position:fixed;left:12px;bottom:max(8px,env(safe-area-inset-bottom));width:72px;height:78px;z-index:8;pointer-events:none;user-select:none;filter:drop-shadow(0 5px 12px rgba(2,9,22,.42));animation:owl-cross 42s linear infinite alternate}
+/* Un búho recorre el borde inferior y despega de vez en cuando. */
+.owl-mascot{position:fixed;left:12px;bottom:max(8px,env(safe-area-inset-bottom));width:72px;height:78px;z-index:8;pointer-events:none;user-select:none;filter:drop-shadow(0 5px 12px rgba(2,9,22,.42));animation:owl-cross 32s linear infinite alternate}
 .owl-mascot svg{width:100%;height:100%;overflow:visible}
-.owl-figure{transform-box:fill-box;transform-origin:center;animation:owl-bob .54s ease-in-out infinite}
-.owl-left-leg{transform-box:fill-box;transform-origin:top center;animation:owl-step .54s ease-in-out infinite alternate}
-.owl-right-leg{transform-box:fill-box;transform-origin:top center;animation:owl-step .54s ease-in-out infinite alternate-reverse}
-.owl-mascot--lower-two{bottom:max(44px,calc(env(safe-area-inset-bottom) + 38px));width:54px;height:60px;animation-name:owl-cross-reverse;animation-duration:50s;animation-delay:-17s;opacity:.9}
-.owl-mascot--upper{top:88px;right:14px;bottom:auto;left:auto;width:44px;height:48px;animation:none;opacity:.86}
-.owl-mascot--upper .owl-figure{animation-duration:.72s}
-.owl-mascot--upper .owl-left-leg,.owl-mascot--upper .owl-right-leg{animation-duration:.62s}
+.owl-figure{transform-box:fill-box;transform-origin:center;animation:owl-bob .42s ease-in-out infinite}
+.owl-flight{transform-box:fill-box;transform-origin:center bottom;animation:owl-flight-hop 20s ease-in-out infinite}
+.owl-wing{transform-box:fill-box;transform-origin:center center}
+.owl-wing--left{transform-origin:100% 50%;animation:owl-flap-left 20s linear infinite}
+.owl-wing--right{transform-origin:0% 50%;animation:owl-flap-right 20s linear infinite}
+.owl-left-leg{transform-box:fill-box;transform-origin:top center;animation:owl-step .42s ease-in-out infinite alternate}
+.owl-right-leg{transform-box:fill-box;transform-origin:top center;animation:owl-step .42s ease-in-out infinite alternate-reverse}
 @keyframes owl-cross{from{transform:translateX(0)}to{transform:translateX(calc(100vw - 84px))}}
-@keyframes owl-cross-reverse{from{transform:translateX(calc(100vw - 84px))}to{transform:translateX(0)}}
 @keyframes owl-bob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-2px) rotate(-1deg)}}
 @keyframes owl-step{from{transform:rotate(-24deg)}to{transform:rotate(24deg)}}
-@media(max-width:600px){
-  .owl-mascot{width:58px;height:64px;left:8px;animation-duration:34s}
-  .owl-mascot--lower-two{width:46px;height:52px;bottom:max(40px,calc(env(safe-area-inset-bottom) + 34px));animation-duration:43s}
-  .owl-mascot--upper{top:72px;right:8px;width:36px;height:40px}
-  @keyframes owl-cross{from{transform:translateX(0)}to{transform:translateX(calc(100vw - 68px))}}
-  @keyframes owl-cross-reverse{from{transform:translateX(calc(100vw - 68px))}to{transform:translateX(0)}}
-}
+@keyframes owl-flight-hop{0%,75%,100%{transform:translateY(0) scale(1)}77%{transform:translateY(-10px) scale(1.02)}81%{transform:translateY(-40px) scale(1.06)}85%{transform:translateY(-44px) scale(1.06)}89%{transform:translateY(-18px) scale(1.02)}93%{transform:translateY(0) scale(1)}}
+@keyframes owl-flap-left{0%,76%,100%{transform:rotate(0) scaleY(1)}77%,79%,81%,83%{transform:rotate(-20deg) scaleY(.72)}78%,80%,82%,84%{transform:rotate(20deg) scaleY(.72)}}
+@keyframes owl-flap-right{0%,76%,100%{transform:rotate(0) scaleY(1)}77%,79%,81%,83%{transform:rotate(20deg) scaleY(.72)}78%,80%,82%,84%{transform:rotate(-20deg) scaleY(.72)}}
+@media(max-width:600px){.owl-mascot{width:58px;height:64px;left:8px;animation-duration:27s}@keyframes owl-cross{from{transform:translateX(0)}to{transform:translateX(calc(100vw - 68px))}}}
