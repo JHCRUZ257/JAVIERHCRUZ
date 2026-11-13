@@ -769,3 +769,59 @@ main,.site-footer{position:relative;z-index:1}
   .book-cover-photo--cien{left:11%;top:60%;transform:rotate(-4deg)}
   .book-cover-photo--relativity{right:10%;top:59%;transform:rotate(4deg)}
 }
+
+/* Nuevo tratamiento tipográfico para el titular principal. */
+.eb-title h1{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:.035em;
+  max-width:none;
+  font-family:"Baloo 2",var(--font-head),sans-serif;
+  font-size:clamp(3.2rem,5.3vw,5.8rem);
+  font-weight:700;
+  line-height:.92;
+  letter-spacing:-.045em;
+}
+.eb-title h1 .headline-line{
+  display:block;
+  width:max-content;
+  max-width:100%;
+  font-family:inherit;
+  font-size:1em;
+  font-weight:700;
+  font-style:normal;
+  line-height:.92;
+  letter-spacing:-.05em;
+  transform-origin:left center;
+}
+.eb-title h1 .headline-line--learn{
+  color:#f7f1e6;
+  transform:rotate(-1deg);
+}
+.eb-title h1 .headline-line--try{
+  color:#69e1d6;
+  text-shadow:0 5px 24px rgba(89,224,211,.16);
+  transform:translateX(.14em) rotate(1.4deg);
+}
+.eb-title h1 .headline-line--try::after{
+  content:"✦";
+  display:inline-block;
+  margin-left:.28em;
+  color:#e9c977;
+  font-size:.28em;
+  vertical-align:top;
+  transform:translateY(.22em) rotate(15deg);
+}
+.eb-title h1 .headline-line--log{
+  padding:.015em .08em .02em .025em;
+  background:linear-gradient(100deg,#f1c96c 0%,#f5df9f 58%,#69e1d6 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+  transform:rotate(-.8deg);
+}
+@media(max-width:600px){
+  .eb-title h1{font-size:clamp(2.75rem,11.5vw,4.25rem);gap:.06em}
+}
